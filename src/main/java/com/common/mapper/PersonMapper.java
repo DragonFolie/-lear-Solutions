@@ -9,6 +9,7 @@ import com.model.dto.PersonDto;
 
 public interface PersonMapper {
 
+
   /**
    * Maps a {@link PersonDto} object to a {@link Person} object.
    *
@@ -17,6 +18,7 @@ public interface PersonMapper {
    */
   Person personDtoToPerson(PersonDto personDto);
 
+
   /**
    * Maps a {@link Person} object to a {@link PersonDto} object.
    *
@@ -24,4 +26,5 @@ public interface PersonMapper {
    * @return The resulting {@link PersonDto} object.
    */
   PersonDto personToPersonDto(Person person);
+
 }

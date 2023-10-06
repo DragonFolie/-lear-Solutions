@@ -1,49 +1,62 @@
 package com.service;
 
+
 import com.entity.Person;
-import com.repository.PersonRepository;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.http.ResponseEntity;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
-@Service
-@Data
-public class PersonService {
+/**
+ * Service interface for managing person.
+ */
+public interface PersonService {
 
-  private PersonRepository personRepository;
-
-
-  @Autowired
-  public PersonService(PersonRepository personRepository) {
-    this.personRepository = personRepository;
-  }
-
-  public List<Person> findAllPerson() {
-    return personRepository.findAll();
-  }
+   /**
+    * Get a list of persons.
+    *
+    * @return the {@link List} containing the {@link Person}
+    * @see Person
+    */
+   List<Person> findAllPerson();
 
 
-  public Person addNewPerson(Person person) {
-    return personRepository.save(person);
-  }
-
-  public Person updatePerson(Person person) {
-    return personRepository.save(person);
-  }
-
-
-  public void deletePersonById(Long id) {
-    personRepository.deleteById(id);
-  }
-
-  public List<Person> findUsersByBirthDateRange(LocalDate from, LocalDate to) {
-    return personRepository.findByDateOfBirthBetween(from, to);
-  }
+   /**
+    * Creates a new user.
+    *
+    * @param person {@link Person} an object with user parameters to save.
+    * @return the created person.
+    * @see Person
+    */
+   Person createPerson(Person person) ;
 
 
+   /**
+    * Update person data.
+    *
+    * @param person  {@link Person} an object with user parameters to save.
+    * @return the created person.
+    * @see Person
+    */
+   Person updatePerson(Person person);
+
+
+   /**
+    * Delete person by define id.
+    *
+    * @param id an object with user parameters to save.
+    * @return the created person.
+    * @see Person
+    */
+   void deletePersonById(Long id);
+
+
+   /**
+    * Finding list of person between two date.
+    *
+    * @param from {@link LocalDate} date from which we start searching person by his birthday date
+    * @param to {@link LocalDate} date of which we end searching person by his birthday date
+    * @return a {@link ResponseEntity} containing the {@link List<Person>} object .
+    */
+   List<Person> findPersonByBirthDateRange(LocalDate from, LocalDate to) ;
 }
