@@ -39,7 +39,7 @@ class PersonRepositoryTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     Person person2 = Person.builder()
@@ -48,7 +48,7 @@ class PersonRepositoryTest {
         .email("test3@gmail.com")
         .dateOfBirth(dateOfBirth2)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     Person person3 = Person.builder()
@@ -57,7 +57,7 @@ class PersonRepositoryTest {
         .email("test3@gmail.com")
         .dateOfBirth(dateOfBirth3)
         .address("test3")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     personRepository.save(person);

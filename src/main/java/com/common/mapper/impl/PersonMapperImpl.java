@@ -3,10 +3,12 @@ package com.common.mapper.impl;
 import com.common.mapper.PersonMapper;
 import com.entity.Person;
 import com.model.dto.PersonDto;
+import com.service.PersonService;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.processing.Generated;
-
+/**
+ * Implementation of interface {@link PersonMapper}.
+ */
 
 @Component
 public class PersonMapperImpl implements PersonMapper {
@@ -24,7 +26,7 @@ public class PersonMapperImpl implements PersonMapper {
     person.email(personDto.getEmail());
     person.dateOfBirth(personDto.getDateOfBirth());
     person.address(personDto.getAddress());
-    person.phone_number(personDto.getPhone_number());
+    person.phoneNumber(personDto.getPhoneNumber());
 
     return person.build();
   }
@@ -43,7 +45,7 @@ public class PersonMapperImpl implements PersonMapper {
     personDto.email(person.getEmail());
     personDto.dateOfBirth(person.getDateOfBirth());
     personDto.address(person.getAddress());
-    personDto.phone_number(person.getPhone_number());
+    personDto.phoneNumber(person.getPhoneNumber());
 
     return personDto.build();
   }

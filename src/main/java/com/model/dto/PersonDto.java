@@ -1,12 +1,21 @@
 package com.model.dto;
 
 import com.common.ApplicationConstants;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.*;
-import lombok.experimental.FieldDefaults;
-
-import javax.validation.constraints.*;
 import java.time.LocalDate;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.FieldDefaults;
 
 
 /**
@@ -53,6 +62,6 @@ public class PersonDto {
 
 
   @Pattern(regexp = "^(\\+\\d{1,3}[- ]?)?\\d{10}$", message = "Invalid phone number format")
-  String phone_number;
+  String phoneNumber;
 
 }

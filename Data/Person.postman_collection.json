@@ -27,33 +27,13 @@
 			"response": []
 		},
 		{
-			"name": "Find by Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/person/{id}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"person",
-						"{id}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Add new person",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "\r\n    {\r\n        \r\n        \"name\": \"test16\",\r\n        \"surname\": \"test_1\",\r\n        \"date_of_birth\": \"18 Years\"\r\n\r\n\r\n    }\r\n",
+					"raw": "\r\n    {\r\n        \"name\": \"test2\",\r\n        \"surname\": \"te2st\",\r\n        \"email\": \"tes2t@gmail.com\",\r\n        \"date_of_birth\": 20231027,\r\n        \"address\": \"te2st\",\r\n        \"phone_number\": \"+380653883388\"\r\n    }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -119,6 +99,28 @@
 					"path": [
 						"person",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find between",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/person/search/1023-10-01/2023-10-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"search",
+						"1023-10-01",
+						"2023-10-05"
 					]
 				}
 			},

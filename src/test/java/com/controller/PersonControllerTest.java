@@ -65,7 +65,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
 
@@ -88,7 +88,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
 
@@ -105,7 +105,7 @@ class PersonControllerTest {
         .andExpect(jsonPath("$.surname").value("test"))
         .andExpect(jsonPath("$.email").value("test@gmail.com"))
         .andExpect(jsonPath("$.address").value("test"))
-        .andExpect(jsonPath("$.phone_number").value("+380653883388"))
+        .andExpect(jsonPath("$.phoneNumber").value("+380653883388"))
         .andExpect(jsonPath("$.date_of_birth").value("2000-01-10"));
 
 
@@ -121,7 +121,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
 
@@ -137,7 +137,7 @@ class PersonControllerTest {
         .andExpect(jsonPath("$.surname").value("test"))
         .andExpect(jsonPath("$.email").value("test@gmail.com"))
         .andExpect(jsonPath("$.address").value("test"))
-        .andExpect(jsonPath("$.phone_number").value("+380653883388"))
+        .andExpect(jsonPath("$.phoneNumber").value("+380653883388"))
         .andExpect(jsonPath("$.date_of_birth").value("2000-01-10"));
 
 
@@ -153,7 +153,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
 
@@ -181,7 +181,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
     Person person2 = Person.builder()
         .name("test")
@@ -189,7 +189,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth2)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
     List<Person> personList = new ArrayList<>();
     personList.add(person2);
@@ -225,7 +225,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     personController.createPerson(personDto);
@@ -251,7 +251,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     personController.createPerson(personDto);
@@ -270,7 +270,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     personController.createPerson(personDto);
@@ -293,7 +293,7 @@ class PersonControllerTest {
         .email("WRONG")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -313,7 +313,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("WRONG")
+        .phoneNumber("WRONG")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -333,7 +333,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("WRONG")
+        .phoneNumber("WRONG")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -353,7 +353,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("WRONG")
+        .phoneNumber("WRONG")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -373,7 +373,7 @@ class PersonControllerTest {
         .email(null)
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("WRONG")
+        .phoneNumber("WRONG")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -392,7 +392,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(null)
         .address("test")
-        .phone_number("WRONG")
+        .phoneNumber("WRONG")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -412,7 +412,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address(null)
-        .phone_number("WRONG")
+        .phoneNumber("WRONG")
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);
@@ -432,7 +432,7 @@ class PersonControllerTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number(null)
+        .phoneNumber(null)
         .build();
 
     Set<ConstraintViolation<PersonDto>> violations = validator.validate(personDto);

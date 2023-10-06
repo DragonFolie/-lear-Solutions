@@ -15,51 +15,39 @@
 	<description>Test task</description>
 	<properties>
 		<java.version>11</java.version>
+		<!-- Define version properties -->
+		<mysql.connector.version>8.0.25</mysql.connector.version>
+		<hibernate.validator.version>6.1.6.Final</hibernate.validator.version>
+		<hibernate.core.version>5.6.3.Final</hibernate.core.version>
+		<junit.version>4.12</junit.version>
+		<json-smart.version>2.3</json-smart.version>
+		<asm.version>1.0.2</asm.version>
+		<spring.boot.version>2.5.0</spring.boot.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.25</version>
-		</dependency>
-
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>6.1.6.Final</version>
+			<version>${hibernate.validator.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -68,55 +56,43 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.6.3.Final</version> <!-- Відповідно до вашої версії -->
+			<version>${hibernate.core.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
 		<dependency>
 			<groupId>net.minidev</groupId>
 			<artifactId>json-smart</artifactId>
-			<version>2.3</version>
+			<version>${json-smart.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.minidev</groupId>
 			<artifactId>asm</artifactId>
-			<version>1.0.2</version>
+			<version>${asm.version}</version>
 			<scope>test</scope>
 		</dependency>
-
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring.boot.version}</version>
 			<scope>test</scope>
-			<version>2.5.0</version>
 		</dependency>
-
-
-
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -124,9 +100,5 @@
 				<version>2.6.2</version>
 			</plugin>
 		</plugins>
-
-
 	</build>
-
 </project>
-

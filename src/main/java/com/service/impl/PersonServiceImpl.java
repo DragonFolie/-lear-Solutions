@@ -4,15 +4,17 @@ import com.common.mapper.impl.PersonMapperImpl;
 import com.entity.Person;
 import com.repository.PersonRepository;
 import com.service.PersonService;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.NoSuchElementException;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.List;
-import java.util.NoSuchElementException;
+/**
+ * Implementation of interface {@link PersonService}.
+ */
 
 @Service
 @Data

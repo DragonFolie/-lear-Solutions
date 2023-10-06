@@ -4,18 +4,24 @@ import com.common.mapper.impl.PersonMapperImpl;
 import com.entity.Person;
 import com.model.dto.PersonDto;
 import com.service.impl.PersonServiceImpl;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.List;
+import java.util.NoSuchElementException;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.List;
-import java.util.NoSuchElementException;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
@@ -40,7 +46,7 @@ public class PersonController {
   /**
    * Retrieves a list of all persons .
    *
-   * @return a {@link ResponseEntity} containing the {@link List<Person>} object and an HTTP status code.
+   * @return a {@link ResponseEntity} containing the {@link List {@link Person}} object and an HTTP status code.
    */
   @GetMapping(path = "/")
   public ResponseEntity<List<Person>> findAll() {
@@ -110,7 +116,7 @@ public class PersonController {
    *
    * @param from {@link LocalDate} date from which we start searching person by his birthday date
    * @param to   {@link LocalDate} date of which we end searching person by his birthday date
-   * @return a {@link ResponseEntity} containing the {@link List<Person>} object and an HTTP status code.
+   * @return a {@link ResponseEntity} containing the {@link List {@link Person}} object and an HTTP status code.
    */
   @GetMapping(path = "/search/{from}/{to}")
   public ResponseEntity<List<Person>> findPersonByBirthDateRange(

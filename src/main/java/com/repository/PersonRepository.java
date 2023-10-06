@@ -2,11 +2,10 @@ package com.repository;
 
 
 import com.entity.Person;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import java.time.LocalDate;
 import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Basic repository for person {@link Person}.

@@ -1,17 +1,37 @@
-!!!!   P.S run test individually in PersonRepositoryTest  !!!!!
+Hi, if you need script  to DB u can find it in "Data" folder , also u can find here Postman request to our API
 
-Потрібно робити SpringBoot application, в якому буде всього один REST endpoint, 
-який повертає json з ім'ям, прізвищем та віком людини за id. У додатку має бути 
-один RestController, Service та Repository. У базі даних зберігатимуться дані 
-про людей: ім'я, прізвище та дата народження. У сервісі вважатиметься вік людини.
-Для роботи програми слід вибрати будь-яку embedded базу даних. Для роботи з базою 
-даних використовувати Spring Data. Вона має стартувати зі стартом програми. Слід
-написати тести (unit + e2e). Складальник будь-який на ваш розсуд. Можна 
-використовувати spring initializr https://start.spring.io/. Програма має 
-успішно білдитися, а тести проходити. Версія джави та всіх залежностей будь-які.
-Код слід запушити в окремий гіт репозиторій, а за виконанням надати посилання.
 
-е2e - це наскрізне тестування усієї логіки програми. Воно не обов'язково має 
-задіяти фронт, а може, якщо він є. Але ми просто REST без фронту. Ми тестуємо 
-програму шляхом відправки різних запитів на REST контролер і очікуємо отримати
-відповідні відповіді. Для таких тестів слід підняти embedded database. 
+
+The task has two parts:
+1. Using the resources listed below learn what is RESTful API and what are the best practices to implement it
+2. According to the requirements implement the RESTful API based on the web Spring Boot application: controller, responsible for the resource named Users.
+
+Resources:
+RESTful API Design. Best Practices in a Nutshell.
+Error Handling for REST with Spring | Baeldung
+Testing in Spring Boot | Baeldung
+Testing | Spring
+
+Requirements:
+1. It has the following fields:
+   1.1. Email (required). Add validation against email pattern
+   1.2. First name (required)
+   1.3. Last name (required)
+   1.4. Birth date (required). Value must be earlier than current date
+   1.5. Address (optional)
+   1.6. Phone number (optional)
+2. It has the following functionality:
+   2.1. Create user. It allows to register users who are more than [18] years old. The value [18] should be taken from properties file.
+   2.2. Update one/some user fields
+   2.3. Update all user fields
+   2.4. Delete user
+   2.5. Search for users by birth date range. Add the validation which checks that “From” is less than “To”.  Should return a list of objects
+3. Code is covered by unit tests using Spring
+4. Code has error handling for REST
+5. API responses are in JSON format
+6. Use of database is not necessary. The data persistence layer is not required.
+7. Any version of Spring Boot. Java version of your choice
+8. You can use Spring Initializer utility to create the project: Spring Initializr
+
+Please note:
+we assess only those assignments where all requirements are implemented

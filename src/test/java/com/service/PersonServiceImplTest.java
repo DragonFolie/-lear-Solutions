@@ -47,7 +47,7 @@ class PersonServiceImplTest {
         .email("test@gmail.com")
         .dateOfBirth(dateOfBirth)
         .address("test")
-        .phone_number("+380653883388")
+        .phoneNumber("+380653883388")
         .build();
   }
 
